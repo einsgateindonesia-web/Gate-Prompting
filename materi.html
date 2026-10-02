@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Materi Gate Prompting — 20 modul dari entry sampai master, dalam Bahasa Indonesia." />
+  <meta name="theme-color" content="#0b0f19" />
+  <title>Materi — Gate Prompting</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-materi">
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">Gate<span class="grad">Prompting</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Beranda</a>
+        <a href="materi.html">Materi</a>
+        <a href="library.html">Library</a>
+        <a href="quiz.html">Kuis</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Ganti tema" title="Ganti tema">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Layout Materi ===== -->
+  <div class="materi-layout container">
+
+    <!-- Sidebar -->
+    <aside class="materi-sidebar" id="materiSidebar">
+      <div class="sidebar-head">
+        <h2>Daftar Modul</h2>
+        <div class="sidebar-progress">
+          <div class="sidebar-progress-bar"><div id="sidebarProgressFill"></div></div>
+          <span id="sidebarProgressText">0 / 20</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav"><!-- rendered by JS --></nav>
+      <div class="sidebar-foot">
+        <button class="btn btn-ghost btn-sm" id="resetProgressBtn">Reset Progress</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="materi-main" id="materiMain">
+      <!-- Rendered by JS -->
+    </main>
+
+    <!-- Mobile sidebar toggle -->
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Buka daftar modul">☰ Daftar</button>
+
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">G</span>
+        <span>Gate Prompting</span>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Beranda</a>
+        <a href="library.html">Library</a>
+        <a href="quiz.html">Kuis</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <p class="muted">© <span id="year"></span> Gate Prompting · Dibikin buat belajar bareng.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js"></script>
+  <script src="js/data-materi.js"></script>
+  <script src="js/materi.js"></script>
+</body>
+</html>
