@@ -50,34 +50,3 @@ gate-prompting/
 └── README.md
 
 
----
-
-## 🛠️ Stack
-
-- **HTML / CSS / JavaScript murni** — zero dependency, zero build step
-- **Deploy:** GitHub Pages (static hosting)
-- **Data:** semua konten di file `js/data-*.js` (gampang diedit)
-- **Storage:** `localStorage` buat progress & preferensi tema
-
-Nggak ada framework, nggak ada npm, nggak ada build. Tinggal push, langsung jalan.
-
----
-
-## 🚀 Jalankan Lokal
-
-### Opsi 1 — Buka langsung
-Klik dua kali `index.html` di file explorer.
-
-### Opsi 2 — Server lokal (recommended)
-Buka terminal di folder project:
-
-```bash
-# Python 3
-python3 -m http.server 8000
-
-# atau Node.js
-npx serve
-
-# atau PHP
-php -S localhost:8000
-
