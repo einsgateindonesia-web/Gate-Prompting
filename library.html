@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Library prompt siap pakai — 24+ prompt untuk nulis, coding, belajar, bisnis, dan analisis. Tinggal copy & pakai." />
+  <meta name="theme-color" content="#0b0f19" />
+  <title>Library Prompt — Gate Prompting</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-library">
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">Gate<span class="grad">Prompting</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Beranda</a>
+        <a href="materi.html">Materi</a>
+        <a href="library.html">Library</a>
+        <a href="quiz.html">Kuis</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Ganti tema" title="Ganti tema">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Header ===== -->
+  <section class="library-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Beranda</a>
+        <span>/</span>
+        <span>Library</span>
+      </nav>
+      <h1 class="library-title">Library <span class="grad">Prompt</span></h1>
+      <p class="library-sub">
+        24+ prompt siap pakai yang udah dioptimasi. Tinggal klik <strong>Copy</strong>,
+        tempel ke AI favorit lu, ganti bagian dalam <code>[kurung siku]</code>, gas.
+      </p>
+
+      <div class="library-search">
+        <span class="search-icon">🔍</span>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Cari prompt... (misal: artikel, debug, caption)"
+          autocomplete="off"
+          aria-label="Cari prompt"
+        />
+        <button class="search-clear" id="searchClear" hidden aria-label="Hapus pencarian">×</button>
+      </div>
+
+      <div class="library-filters" id="libraryFilters" role="tablist">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Grid Prompt ===== -->
+  <section class="section library-section">
+    <div class="container">
+      <div class="library-count" id="libraryCount">Memuat...</div>
+      <div class="library-grid" id="libraryGrid">
+        <!-- rendered by JS -->
+      </div>
+      <div class="library-empty" id="libraryEmpty" hidden>
+        <span class="empty-icon">🔎</span>
+        <h3>Nggak ketemu</h3>
+        <p>Coba keyword lain atau ganti kategori.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section section-alt">
+    <div class="container cta-final">
+      <h2>Mau Bikin Prompt Sendiri?</h2>
+      <p>Pelajari framework-nya di materi Level 1 sampai Level 4.</p>
+      <div class="hero-cta">
+        <a href="materi.html" class="btn btn-primary">Gas Belajar</a>
+        <a href="quiz.html" class="btn btn-ghost">Tes Kemampuan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">G</span>
+        <span>Gate Prompting</span>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Beranda</a>
+        <a href="materi.html">Materi</a>
+        <a href="quiz.html">Kuis</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <p class="muted">© <span id="year"></span> Gate Prompting · Dibikin buat belajar bareng.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js"></script>
+  <script src="js/data-library.js"></script>
+  <script src="js/library.js"></script>
+</body>
+</html>
