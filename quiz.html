@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kuis interaktif Gate Prompting — uji pemahaman tiap level materi." />
+  <meta name="theme-color" content="#0b0f19" />
+  <title>Kuis — Gate Prompting</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-quiz">
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">Gate<span class="grad">Prompting</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Beranda</a>
+        <a href="materi.html">Materi</a>
+        <a href="library.html">Library</a>
+        <a href="quiz.html">Kuis</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Ganti tema" title="Ganti tema">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Header ===== -->
+  <section class="quiz-header-section">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Beranda</a>
+        <span>/</span>
+        <span>Kuis</span>
+      </nav>
+      <h1 class="quiz-page-title">Uji <span class="grad">Pemahaman</span> Lu</h1>
+      <p class="quiz-page-sub">
+        Pilih level kuis, jawab soal, langsung dapat feedback. Skor lu otomatis kesimpen.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Quiz Picker ===== -->
+  <section class="section quiz-picker-section" id="quizPickerSection">
+    <div class="container">
+      <div class="quiz-picker-grid" id="quizPickerGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== Quiz Runner ===== -->
+  <section class="section quiz-runner-section" id="quizRunnerSection" hidden>
+    <div class="container">
+      <div class="quiz-runner" id="quizRunner">
+
+        <div class="quiz-runner-head">
+          <div class="quiz-runner-meta">
+            <span class="quiz-runner-label" id="quizRunnerLabel">Level 1 — Fondasi</span>
+            <span class="quiz-runner-progress" id="quizRunnerProgress">Soal 1 / 6</span>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="quizQuitBtn">Keluar</button>
+        </div>
+
+        <div class="quiz-progress-bar">
+          <div id="quizProgressFill"></div>
+        </div>
+
+        <div class="quiz-question-block">
+          <h2 class="quiz-question" id="quizQuestion">Memuat soal...</h2>
+          <div class="quiz-options" id="quizOptions"></div>
+        </div>
+
+        <div class="quiz-feedback" id="quizFeedback" hidden></div>
+
+        <div class="quiz-runner-actions">
+          <button class="btn btn-primary" id="quizNextBtn" disabled>Lanjut →</button>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="quiz-result" id="quizResult" hidden>
+        <span class="quiz-result-emoji" id="quizResultEmoji">🎉</span>
+        <h2 id="quizResultTitle">Selesai!</h2>
+        <div class="quiz-result-score" id="quizResultScore">0 / 0</div>
+        <p class="quiz-result-msg" id="quizResultMsg"></p>
+
+        <div class="quiz-result-review" id="quizResultReview"></div>
+
+        <div class="quiz-result-actions">
+          <button class="btn btn-primary" id="quizRetryBtn">Ulangi Kuis Ini</button>
+          <button class="btn btn-ghost" id="quizBackBtn">Pilih Level Lain</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">G</span>
+        <span>Gate Prompting</span>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Beranda</a>
+        <a href="materi.html">Materi</a>
+        <a href="library.html">Library</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <p class="muted">© <span id="year"></span> Gate Prompting · Dibikin buat belajar bareng.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js"></script>
+  <script src="js/data-quiz.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
