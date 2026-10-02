@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gate Prompting — Belajar prompting dari entry level sampai master. Materi terstruktur, contoh nyata, kuis interaktif, dan library prompt siap pakai." />
+  <meta name="theme-color" content="#0b0f19" />
+  <title>Gate Prompting — Dari Entry Sampai Master</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">Gate<span class="grad">Prompting</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Beranda</a>
+        <a href="materi.html">Materi</a>
+        <a href="library.html">Library</a>
+        <a href="quiz.html">Kuis</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Ganti tema" title="Ganti tema">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="badge">Gratis · Tanpa Login · Bahasa Indonesia</span>
+      <h1>Naikin Kualitas <span class="grad">Prompt</span> Lu dari Entry Sampai Master</h1>
+      <p class="lead">
+        Bukan teori doang. Materi terstruktur, contoh prompt jelek vs bagus,
+        kuis interaktif, dan library prompt siap pakai — semua dalam satu tempat.
+      </p>
+      <div class="hero-cta">
+        <a href="materi.html" class="btn btn-primary">Mulai dari Level 1</a>
+        <a href="#kurikulum" class="btn btn-ghost">Lihat Kurikulum</a>
+      </div>
+
+      <div class="stats" id="stats">
+        <div><strong id="statMateri">20</strong><span>Modul Materi</span></div>
+        <div><strong id="statLibrary">24</strong><span>Prompt Siap Pakai</span></div>
+        <div><strong id="statQuiz">40+</strong><span>Soal Kuis</span></div>
+        <div><strong id="statBlog">6</strong><span>Artikel</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Progress Card (muncul kalau ada progress) ===== -->
+  <section class="section section-progress" id="progressSection" hidden>
+    <div class="container">
+      <div class="progress-card">
+        <div class="progress-info">
+          <h3>Progress Belajar Lu</h3>
+          <p id="progressText">0 dari 20 modul selesai</p>
+        </div>
+        <div class="progress-bar-lg">
+          <div id="progressFill"></div>
+        </div>
+        <a href="materi.html" class="btn btn-primary">Lanjut Belajar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Kenapa Gate Prompting ===== -->
+  <section class="section" id="kenapa">
+    <div class="container">
+      <h2 class="section-title">Kenapa Gate Prompting?</h2>
+      <p class="section-sub">Dibikin buat lu yang udah pakai AI tapi masih ngerasa hasilnya "biasa aja".</p>
+      <div class="grid grid-3">
+        <div class="feature-card">
+          <span class="feature-icon">🪜</span>
+          <h3>Terstruktur, Bukan Acak</h3>
+          <p>4 level berurutan: Fondasi → Teknik Dasar → Lanjutan → Master. Nggak ada lompat-lompat.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">⚖️</span>
+          <h3>Contoh Nyata</h3>
+          <p>Setiap konsep ada perbandingan prompt jelek vs bagus. Lu langsung lihat bedanya.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📚</span>
+          <h3>Library Siap Pakai</h3>
+          <p>24+ prompt siap copy buat nulis, coding, belajar, bisnis, dan analisis.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">✅</span>
+          <h3>Progress Kesimpen</h3>
+          <p>Tandai modul selesai, progress otomatis kesimpen di browser lu. Nggak perlu login.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🧪</span>
+          <h3>Kuis Interaktif</h3>
+          <p>Uji pemahaman tiap level. Ada feedback langsung buat tiap jawaban.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🌓</span>
+          <h3>Dark / Light Mode</h3>
+          <p>Mata lu capek? Ganti tema sekali klik. Preferensi kesimpen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Kurikulum ===== -->
+  <section class="section section-alt" id="kurikulum">
+    <div class="container">
+      <h2 class="section-title">Kurikulum</h2>
+      <p class="section-sub">4 level, 20 modul. Semua general — bisa dipakai di AI apapun.</p>
+
+      <div class="level-grid">
+        <a href="materi.html?level=1" class="level-card">
+          <span class="level-num">01</span>
+          <h3>Fondasi</h3>
+          <p>Entry level. Pahami dulu apa itu prompt dan komponen dasarnya.</p>
+          <ul>
+            <li>5 modul</li>
+            <li>Zero prerequisite</li>
+          </ul>
+          <span class="level-tag">Entry</span>
+        </a>
+        <a href="materi.html?level=2" class="level-card">
+          <span class="level-num">02</span>
+          <h3>Teknik Dasar</h3>
+          <p>Few-shot, role prompting, constraint, formatting.</p>
+          <ul>
+            <li>5 modul</li>
+            <li>Butuh Level 1</li>
+          </ul>
+          <span class="level-tag">Intermediate</span>
+        </a>
+        <a href="materi.html?level=3" class="level-card">
+          <span class="level-num">03</span>
+          <h3>Lanjutan</h3>
+          <p>Chain of Thought, Tree of Thoughts, prompt chaining.</p>
+          <ul>
+            <li>5 modul</li>
+            <li>Butuh Level 2</li>
+          </ul>
+          <span class="level-tag">Advanced</span>
+        </a>
+        <a href="materi.html?level=4" class="level-card">
+          <span class="level-num">04</span>
+          <h3>Master</h3>
+          <p>System prompt design, evaluasi, anti-pattern, framework sendiri.</p>
+          <ul>
+            <li>5 modul</li>
+            <li>Butuh Level 3</li>
+          </ul>
+          <span class="level-tag">Pro</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Preview Contoh ===== -->
+  <section class="section" id="preview">
+    <div class="container">
+      <h2 class="section-title">Sneak Peek</h2>
+      <p class="section-sub">Ini contoh isi materi Level 1.</p>
+
+      <div class="contoh-box">
+        <div class="contoh-side bad">
+          <h4>❌ Prompt Jelek</h4>
+          <pre>Bikin artikel tentang AI.</pre>
+        </div>
+        <div class="contoh-side good">
+          <h4>✅ Prompt Bagus</h4>
+          <pre>Kamu adalah content writer teknologi.
+Tulis artikel 600 kata tentang "AI untuk UMKM"
+untuk pemilik usaha kecil non-teknis.
+Gaya santai, hindari jargon, kasih 3 contoh nyata.
+Format: judul + 4 subjudul + kesimpulan.</pre>
+        </div>
+      </div>
+
+      <div class="center-cta">
+        <a href="materi.html" class="btn btn-primary">Lihat Materi Lengkap</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA Akhir ===== -->
+  <section class="section section-alt">
+    <div class="container cta-final">
+      <h2>Siap Naikin Level Prompting Lu?</h2>
+      <p>Mulai dari Level 1, gratis, nggak perlu daftar.</p>
+      <div class="hero-cta">
+        <a href="materi.html" class="btn btn-primary">Gas Belajar</a>
+        <a href="library.html" class="btn btn-ghost">Langsung ke Library</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">G</span>
+        <span>Gate Prompting</span>
+      </div>
+      <nav class="footer-links">
+        <a href="materi.html">Materi</a>
+        <a href="library.html">Library</a>
+        <a href="quiz.html">Kuis</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <p class="muted">© <span id="year"></span> Gate Prompting · Dibikin buat belajar bareng.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Toast ===== -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
